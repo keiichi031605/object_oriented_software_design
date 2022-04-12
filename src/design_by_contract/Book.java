@@ -5,12 +5,12 @@ import com.google.java.contract.*;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
  
- 
+// @invariant is for instance field validation
 @Invariant({"title != null && title.length() > 0", "price > 0"})
 public class Book {
     private final String title;
     private int price;
- 
+//    @require is for constructor validation
     @Requires({"title != null && title.length() > 0", "price > 0"})
     public Book(String title, int price) {
         this.title = title;
