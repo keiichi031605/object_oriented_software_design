@@ -10,7 +10,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class Book {
     private final String title;
     private int price;
-//    @require is for constructor validation
+    // @require is for constructor validation
     @Requires({"title != null && title.length() > 0", "price > 0"})
     public Book(String title, int price) {
         this.title = title;
