@@ -1,4 +1,4 @@
-package set;
+package collection;
 
 import java.util.*;
 public class SetPractice {

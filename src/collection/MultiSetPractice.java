@@ -1,4 +1,4 @@
-package set;
+package collection;
 import java.util.*;
 import com.google.common.collect.*;
 
