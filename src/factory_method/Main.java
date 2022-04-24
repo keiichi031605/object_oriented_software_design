@@ -1,3 +1,4 @@
+// https://qiita.com/i-tanaka730/items/1f521866c7d699ddd093
 package factory_method;
 
 public class Main {
