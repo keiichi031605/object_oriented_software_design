@@ -3,6 +3,9 @@ package builder;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
 
 public class HTMLBuilder extends Builder {
 
