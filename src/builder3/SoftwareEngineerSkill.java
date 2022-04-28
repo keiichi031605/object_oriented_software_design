@@ -1,5 +1,6 @@
 package builder3;
 
+import java.util.*;
 public class SoftwareEngineerSkill {
     private Employee employee;
     private ArrayList<Language> languages;
@@ -11,79 +12,58 @@ public class SoftwareEngineerSkill {
     private Collaboration collaboration;
 
     private SoftwareEngineerSkill(SkillBuilder builder) {
-        this.firstName = builder.firstName;
-        this.lastName = builder.lastName;
-        this.age = builder.age;
-        this.gender = builder.gender;
-        this.isGraduate = builder.isGraduate;
-        this.hasExperience = builder.hasExperience;
-        this.city = builder.city;
-        this.state = builder.state;
-        this.isEarning = builder.isEarning;
+        this.employee = builder.employee;
+        this.languages = builder.languages;
+        this.experience = builder.experience;
+        this.knowledge = builder.knowledge;
+        this.enthusiasm = builder.enthusiasm;
+        this.responsibility = builder.responsibility;
+        this.workQuality = builder.workQuality;
+        this.collaboration = builder.collaboration;
     }
-
-    // @Override
-    // public String toString() {
-    //     return " firstName=" + firstName + "\n lastName=" + lastName + "\n age=" + age + "\n gender=" + gender
-    //             + "\n isGraduate=" + isGraduate + "\n hasExperience=" + hasExperience + "\n city=" + city + "\n state="
-    //             + state + "\n isEarning=" + isEarning;
-    // }
-
     public static class SkillBuilder {
+        private Employee employee;
+        private ArrayList<Language> languages;
+        private Experience experience;
+        private Knowledge knowledge;
+        private Enthusiasm enthusiasm;
+        private Responsibility responsibility;
+        private WorkQuality workQuality;
+        private Collaboration collaboration;
 
-        private String firstName;
-        private String lastName;
-        private String age;
-        private String gender;
-        private boolean isGraduate;
-        private boolean hasExperience;
-        private String city;
-        private String state;
-        private boolean isEarning;
-
-        public SkillBuilder(String firstName, String lastName) {
-            this.firstName = firstName;
-            this.lastName = lastName;
+        public SkillBuilder(Employee employee) {
+            this.employee = employee;
         }
-
-        public SkillBuilder addAge(String age) {
-            this.age = age;
+        public SkillBuilder addLanguage(Language language) {
+            this.languages.add(language);
             return this;
         }
-
-        public SkillBuilder addGender(String gender) {
-            this.gender = gender;
+        public SkillBuilder addExperience(Experience experience) {
+            this.experience = experience;
             return this;
         }
-
-        public SkillBuilder addisGraduate(boolean isGraduate) {
-            this.isGraduate = isGraduate;
+        public SkillBuilder addKnowledge(Knowledge knowledge) {
+            this.knowledge = knowledge;
             return this;
         }
-
-        public SkillBuilder addHasExperience(boolean hasExperience) {
-            this.hasExperience = hasExperience;
+        public SkillBuilder addEnthusiasm(Enthusiasm enthusiasm) {
+            this.enthusiasm = enthusiasm;
             return this;
         }
-
-        public SkillBuilder addCity(String city) {
-            this.city = city;
+        public SkillBuilder addResponsibility(Responsibility responsibility) {
+            this.responsibility = responsibility;
             return this;
         }
-
-        public SkillBuilder addState(String state) {
-            this.state = state;
+        public SkillBuilder addWorkQuality(WorkQuality workQuality) {
+            this.workQuality = workQuality;
             return this;
         }
-
-        public SkillBuilder addIsEarning(boolean isEarning) {
-            this.isEarning = isEarning;
+        public SkillBuilder addCollaboration(Collaboration collaboration) {
+            this.collaboration = collaboration;
             return this;
         }
-
         public SoftwareEngineerSkill build() {
             return new SoftwareEngineerSkill(this);
         }
-
     }
 }
