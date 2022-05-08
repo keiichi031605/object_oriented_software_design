@@ -1,6 +1,7 @@
 //https://qiita.com/i-tanaka730/items/c0177e17c9df5f379925
 package prototype;
 
+
 public class Main {
     public static void main(String[] args) {
 
