@@ -2,10 +2,10 @@ package proxy;
 //https://qiita.com/i-tanaka730/items/47efbab5eccc2d36759f
 public class Main {
     public static void main(String[] args) {
-        Printable p = new PrinterProxy("Alice");
-        System.out.println("名前は現在" + p.getPrinterName() + "です。");
-        p.setPrinterName("Bob");
-        System.out.println("名前は現在" + p.getPrinterName() + "です。");
+        Printable p = new PrinterProxy("Kate");
+        System.out.println("current name is " + p.getPrinterName() + ".");
+        p.setPrinterName("Keiichi");
+        System.out.println("current name is " + p.getPrinterName() + ".");
         p.print("Hello, world.");
     }
 }

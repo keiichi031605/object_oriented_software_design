@@ -1,7 +1,7 @@
 package proxy;
 
 public class PrinterProxy implements Printable {
-
+    // This is the proxy class
     private String name;
     private Printer real;
 

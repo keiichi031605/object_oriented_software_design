@@ -5,12 +5,12 @@ public class Printer implements Printable {
     private String name;
 
     public Printer() {
-        heavyJob("Printerのインスタンスを生成中");
+        heavyJob("Creating an Instance of Printer");
     }
 
     public Printer(String name) {
         this.name = name;
-        heavyJob("Printerのインスタンス(" + name + ")を生成中");
+        heavyJob("Creating an Instance of Printer(" + name + ")...");
     }
 
     public void setPrinterName(String name) {
@@ -35,6 +35,6 @@ public class Printer implements Printable {
             }
             System.out.print(".");
         }
-        System.out.println("完了。");
+        System.out.println("Completed");
     }
 }
