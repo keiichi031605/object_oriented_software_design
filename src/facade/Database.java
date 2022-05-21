@@ -12,7 +12,7 @@ public class Database {
         String filename = dbname + ".txt";
         Properties prop = new Properties();
         try {
-            prop.load(new FileInputStream(filename));
+            prop.load(new FileInputStream("src/facade/" + filename));
         } catch (IOException e) {
             System.out.println("Warning: " + filename + " is not found.");
         }

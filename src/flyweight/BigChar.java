@@ -6,16 +6,14 @@ import java.io.IOException;
 
 public class BigChar {
 
-    // 文字の名前
     private char charname;
-    // 大きな文字を表現する文字列('#' '.' '\n'の列)
     private String fontdata;
 
     public BigChar(char charname) {
         this.charname = charname;
         try {
             BufferedReader reader = new BufferedReader(
-                    new FileReader("big" + charname + ".txt"));
+                    new FileReader("src/flyweight/big" + charname + ".txt"));
             String line;
             StringBuffer buf = new StringBuffer();
             while ((line = reader.readLine()) != null) {
@@ -29,7 +27,6 @@ public class BigChar {
         }
     }
 
-    // 大きな文字を表示する
     public void print() {
         System.out.print(fontdata);
     }
