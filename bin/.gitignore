@@ -23,3 +23,9 @@
 /proxy/
 /refactoring/
 /singleton/
+/Command.class
+/command/
+/memento/
+/visitor.class
+/Element.class
+/visitor/
